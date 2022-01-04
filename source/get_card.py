@@ -26,7 +26,7 @@ def main():
         for i in range(70):
             up = (i // 10) * HEIGHT
             left = (i % 10) * WIDTH
-            cropped = img[up : up + 1050, left : left + 750]
+            cropped = img[up : up + HEIGHT, left : left + WIDTH]
             cv2.imwrite(TARGET + str(counter) + str(i) + ".jpg", cropped)
 
 
