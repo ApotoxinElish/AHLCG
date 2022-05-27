@@ -11,6 +11,10 @@ namespace AHLCG
     {
 #pragma warning disable 649
         [SerializeField]
+        private EncounterArea encounterArea;
+
+        [Space]
+        [SerializeField]
         private FirstGameSetup firstGameSetup;
         [SerializeField]
         private ScenarioSetup scenarioSetup;

@@ -903,7 +903,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameSystem: {fileID: 423871971}
-  investigator: {fileID: 11400000, guid: 794d4bac97eb1534497f6af1a6983781, type: 2}
+  playerWidget: {fileID: 5756468422245355262}
+  playerConfig: {fileID: 11400000, guid: 89d7e34e4580dae4685da9179b128e9b, type: 2}
+  investigatorTemplate: {fileID: 11400000, guid: ceae618cd45c16b4cb9e2b9e9b3d03c0, type: 2}
   handArea: {fileID: 1966249274}
 --- !u!1 &406589494
 GameObject:

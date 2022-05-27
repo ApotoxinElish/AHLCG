@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace AHLCG
@@ -9,7 +7,7 @@ namespace AHLCG
     [CreateAssetMenu(
         menuName = "AHLCG/Templates/Investigator",
         fileName = "Investigator",
-        order = 0)]
+        order = 1)]
     public class InvestigatorTemplate : ScriptableObject
     {
         public int Willpower;
@@ -21,6 +19,8 @@ namespace AHLCG
         public int Sanity;
         public int Clue;
         public int Resource;
+
+        public Sprite Picture;
 
         public CardLibrary StartingDeck;
     }

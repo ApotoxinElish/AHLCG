@@ -10,9 +10,15 @@ namespace AHLCG
         [SerializeField]
         private GameSystem gameSystem;
 
+        [Space]
         [SerializeField]
-        private InvestigatorTemplate investigator;
+        private PlayerWidget playerWidget;
+        [SerializeField]
+        private PlayableCharacterConfiguration playerConfig;
+        [SerializeField]
+        private InvestigatorTemplate investigatorTemplate;
 
+        [Space]
         [SerializeField]
         private ObjectPool handArea;
 #pragma warning restore 649
@@ -30,7 +36,16 @@ namespace AHLCG
 
         private void ChooseInvestigators()
         {
-            gameSystem.SetInvestigator(investigator);
+            var health = playerConfig.Health;
+            var sanity = playerConfig.Sanity;
+            var resource = playerConfig.Resource;
+            health.Value = investigatorTemplate.Health;
+            sanity.Value = investigatorTemplate.Sanity;
+            resource.Value = investigatorTemplate.Resource;
+
+            playerWidget.Initialize(investigatorTemplate);
+
+            gameSystem.SetInvestigator(investigatorTemplate);
         }
 
         private void GatherDecks()
