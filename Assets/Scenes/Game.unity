@@ -1079,7 +1079,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &423871970
 Transform:
   m_ObjectHideFlags: 0
@@ -1110,6 +1110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 241a02cdb534d414f86a85258dde59e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  encounterArea: {fileID: 0}
   firstGameSetup: {fileID: 333252875}
   scenarioSetup: {fileID: 1341881639}
   roundSequence: {fileID: 1043077962}
@@ -2437,7 +2438,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1184127654
 Transform:
   m_ObjectHideFlags: 0
