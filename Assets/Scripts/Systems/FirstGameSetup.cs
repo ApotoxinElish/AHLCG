@@ -11,7 +11,7 @@ namespace AHLCG
         private GameSystem gameSystem;
 
         [SerializeField]
-        private Investigator investigator;
+        private InvestigatorTemplate investigator;
 
         [SerializeField]
         private ObjectPool handArea;

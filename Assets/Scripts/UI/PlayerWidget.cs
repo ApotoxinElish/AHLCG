@@ -30,7 +30,7 @@ namespace AHLCG
 
         // private int maxValue;
 
-        public void Initialize(PlayerTemplate template)
+        public void Initialize(InvestigatorTemplate template)
         {
             // maxValue = resource.Value;
             SetWillpowerValue(template.Willpower);

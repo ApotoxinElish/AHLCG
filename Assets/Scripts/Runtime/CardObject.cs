@@ -91,7 +91,7 @@ namespace AHLCG
             //     builder.AppendFormat("{0}. ", effect.GetName());
             // }
             // abilityText.text = builder.ToString();
-            picture.material = Template.Material;
+            // picture.material = Template.Material;
             picture.sprite = Template.Picture;
         }
 

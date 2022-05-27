@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6444c4822f61ed048b986dfe8b3bfafa, type: 3}
-  m_Name: Player
-  m_EditorClassIdentifier: 
-  Name: Roland Banks
-  Prefab: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 86c2c9217154f324e90b29c1db95e240, type: 3}
+  m_Name: Investigator
+  m_EditorClassIdentifier: Assembly-CSharp:AHLCG:Investigator
   Willpower: 3
   Intellect: 3
   Combat: 4

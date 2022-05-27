@@ -1,15 +1,16 @@
 using System;
-using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace AHLCG
 {
     [Serializable]
     [CreateAssetMenu(
-        menuName = "AHLCG/Templates/Player",
-        fileName = "Player",
-        order = 1)]
-    public class PlayerTemplate : CharacterTemplate
+        menuName = "AHLCG/Templates/Investigator",
+        fileName = "Investigator",
+        order = 0)]
+    public class InvestigatorTemplate : ScriptableObject
     {
         public int Willpower;
         public int Intellect;

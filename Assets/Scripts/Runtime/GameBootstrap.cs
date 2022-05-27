@@ -20,7 +20,7 @@ namespace AHLCG
         private EffectResolutionSystem effectResolutionSystem;
 
         [SerializeField]
-        private PlayerTemplate characterTemplate;
+        private InvestigatorTemplate characterTemplate;
 
         [SerializeField]
         private Canvas canvas;
@@ -61,7 +61,7 @@ namespace AHLCG
             CreatePlayer(characterTemplate);
         }
 
-        private void CreatePlayer(PlayerTemplate template)
+        private void CreatePlayer(InvestigatorTemplate template)
         {
             // player = Instantiate(template.Prefab, playerPivot);
             // Assert.IsNotNull(player);

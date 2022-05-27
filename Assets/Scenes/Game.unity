@@ -903,7 +903,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameSystem: {fileID: 423871971}
-  investigator: {fileID: 0}
+  investigator: {fileID: 11400000, guid: 794d4bac97eb1534497f6af1a6983781, type: 2}
   handArea: {fileID: 1966249274}
 --- !u!1 &406589494
 GameObject:
@@ -4438,7 +4438,7 @@ MonoBehaviour:
   handPresentationSystem: {fileID: 1150562227}
   phaseManagementSystem: {fileID: 179177598}
   effectResolutionSystem: {fileID: 0}
-  characterTemplate: {fileID: 11400000, guid: 84de0f8b2fa70ec4091b3764083d47d8, type: 2}
+  characterTemplate: {fileID: 11400000, guid: ceae618cd45c16b4cb9e2b9e9b3d03c0, type: 2}
   canvas: {fileID: 94989990}
   playerWidget: {fileID: 5756468422245355262}
   deckWidget: {fileID: 1765413642}

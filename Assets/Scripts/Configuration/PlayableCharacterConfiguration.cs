@@ -3,7 +3,7 @@ using UnityEngine;
 namespace AHLCG
 {
     [CreateAssetMenu(
-        menuName = "AHC/Configuration/Player character",
+        menuName = "AHLCG/Configuration/Player character",
         fileName = "PCConfiguration",
         order = 0)]
     public class PlayableCharacterConfiguration : ScriptableObject
