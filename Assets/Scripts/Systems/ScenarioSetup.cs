@@ -13,6 +13,8 @@ namespace AHLCG
 
         public void Initialize()
         {
+            Debug.Log("Scenario Setup Initialize");
+
             GatherScenarioCards();
             SetAgendaDeck();
             SetActDeck();

@@ -23,7 +23,7 @@ namespace AHLCG
 
         public void Initialize()
         {
-
+            Debug.Log("Round Sequence Initialize");
         }
 
         public void BeginGame()
@@ -33,7 +33,10 @@ namespace AHLCG
 
         private void BeginMythosPhase() { }
 
-        private void BeginInvestigationPhase() { }
+        private void BeginInvestigationPhase()
+        {
+            Debug.Log("Investigation Phase Begin");
+        }
 
         private void BeginEnemyPhase() { }
 

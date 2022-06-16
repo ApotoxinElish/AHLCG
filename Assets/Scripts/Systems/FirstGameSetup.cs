@@ -12,19 +12,15 @@ namespace AHLCG
 
         [Space]
         [SerializeField]
-        private PlayerWidget playerWidget;
-        [SerializeField]
         private PlayableCharacterConfiguration playerConfig;
         [SerializeField]
         private InvestigatorTemplate investigatorTemplate;
-
-        [Space]
-        [SerializeField]
-        private ObjectPool handArea;
 #pragma warning restore 649
 
         public void Initialize()
         {
+            Debug.Log("First Game Setup Initialize");
+
             ChooseInvestigators();
             GatherDecks();
             ChooseLeadInvestigator();
@@ -38,19 +34,36 @@ namespace AHLCG
         {
             var health = playerConfig.Health;
             var sanity = playerConfig.Sanity;
-            var resource = playerConfig.Resource;
             health.Value = investigatorTemplate.Health;
             sanity.Value = investigatorTemplate.Sanity;
-            resource.Value = investigatorTemplate.Resource;
 
-            playerWidget.Initialize(investigatorTemplate);
+            // gameSystem.playerWidget.Initialize(investigatorTemplate);
 
             gameSystem.SetInvestigator(investigatorTemplate);
         }
 
         private void GatherDecks()
         {
-            handArea.Initialize();
+            var deck = new List<RuntimeCard>();
+
+            var library = investigatorTemplate.StartingDeck;
+            foreach (var entry in library.Entries)
+            {
+                // Skip over invalid entries.
+                if (entry.Card == null)
+                    continue;
+
+                for (var i = 0; i < entry.NumCopies; i++)
+                {
+                    var card = new RuntimeCard
+                    {
+                        Template = entry.Card
+                    };
+                    deck.Add(card);
+                }
+            }
+            deck.Shuffle();
+            gameSystem.SetPlayerDeck(deck);
         }
 
         private void ChooseLeadInvestigator() { }
@@ -59,8 +72,14 @@ namespace AHLCG
 
         private void AssembletheChaosBag() { }
 
-        private void TakeStartingResources() { }
+        private void TakeStartingResources()
+        {
+            playerConfig.Resource.SetValue(5);
+        }
 
-        private void DrawOpeningHand() { }
+        private void DrawOpeningHand()
+        {
+
+        }
     }
 }

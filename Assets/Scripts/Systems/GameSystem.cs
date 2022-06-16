@@ -11,7 +11,17 @@ namespace AHLCG
     {
 #pragma warning disable 649
         [SerializeField]
+        private PlayerWidget playerWidget;
+        [SerializeField]
+        private DeckWidget deckWidget;
+        [SerializeField]
+        private DiscardPileWidget discardPileWidget;
+
+        [Space]
+        [SerializeField]
         private EncounterArea encounterArea;
+        [SerializeField]
+        private ObjectPool handArea;
 
         [Space]
         [SerializeField]
@@ -22,7 +32,10 @@ namespace AHLCG
         private RoundSequence roundSequence;
 #pragma warning restore 649
 
+        // [SerializeField]
         private InvestigatorTemplate investigator;
+        // [SerializeField]
+        private List<RuntimeCard> playerDeck;
 
         private void Start()
         {
@@ -41,6 +54,16 @@ namespace AHLCG
         public void SetInvestigator(InvestigatorTemplate _investigator)
         {
             investigator = _investigator;
+            playerWidget.Initialize(_investigator);
+        }
+
+        public void SetPlayerDeck(List<RuntimeCard> deck, int discardPileCount = 0)
+        {
+            playerDeck = deck;
+            deckWidget.SetAmount(deck.Count);
+            discardPileWidget.SetAmount(discardPileCount);
+
+            // Debug.Log(playerDeck);
         }
     }
 }

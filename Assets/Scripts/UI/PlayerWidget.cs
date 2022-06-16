@@ -39,8 +39,8 @@ namespace AHLCG
             SetAgilityValue(template.Agility);
             SetHealthValue(template.Health);
             SetSanityValue(template.Sanity);
-            SetClueValue(template.Clue);
-            SetResourceValue(template.Resource);
+            // SetClueValue(template.Clue);
+            // SetResourceValue(template.Resource);
         }
 
         private void SetWillpowerValue(int value)
