@@ -13,9 +13,9 @@ TagManager:
   - UI
   - 
   - 
-  - Card
-  - Ally
-  - Enemy
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -40,19 +40,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Background
-    uniqueID: 360785527
-    locked: 0
-  - name: Characters
-    uniqueID: 2485197065
-    locked: 0
-  - name: UI
-    uniqueID: 59113049
-    locked: 0
-  - name: Cards
-    uniqueID: 3096974715
-    locked: 0
-  - name: Topmost
-    uniqueID: 1666726263
     locked: 0
