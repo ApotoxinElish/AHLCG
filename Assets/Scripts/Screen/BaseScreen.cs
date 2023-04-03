@@ -47,7 +47,7 @@ namespace AHLCG
 
         }
 
-        public void OnPopupClosed()
+        public void OnPopupClosed(Popup popup)
         {
 
         }

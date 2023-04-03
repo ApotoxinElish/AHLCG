@@ -1,18 +1,28 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Popup : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+using DG.Tweening;
 
-    // Update is called once per frame
-    void Update()
+namespace AHLCG
+{
+    public class Popup : MonoBehaviour
     {
-        
+        public BaseScreen parentScene;
+
+        public void Close()
+        {
+            OnPopupClosedActions();
+
+            if (parentScene != null)
+            {
+                parentScene.OnPopupClosed(this);
+            }
+
+            Destroy(gameObject);
+        }
+
+        public virtual void OnPopupClosedActions()
+        {
+            DOTween.KillAll();
+        }
     }
 }
