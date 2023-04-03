@@ -41,11 +41,11 @@ namespace AHLCG
         {
             OpenPopup<PopupTwoButtons>("PopupTwoButtons", popup =>
             {
-                //     popup.text.text = "Do you want to quit?";
-                //     popup.buttonText.text = "Yes";
-                //     popup.button2Text.text = "No";
-                //     popup.button.onClickEvent.AddListener(() => { Application.Quit(); });
-                //     popup.button2.onClickEvent.AddListener(() => { popup.Close(); });
+                popup.text.text = "Do you want to quit?";
+                popup.buttonText.text = "Yes";
+                popup.button2Text.text = "No";
+                popup.button.onClickEvent.AddListener(() => { Application.Quit(); });
+                popup.button2.onClickEvent.AddListener(() => { popup.Close(); });
             });
         }
     }

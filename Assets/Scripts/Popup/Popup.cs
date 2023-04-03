@@ -6,7 +6,7 @@ namespace AHLCG
 {
     public class Popup : MonoBehaviour
     {
-        public BaseScreen parentScene;
+        [HideInInspector] public BaseScreen parentScene;
 
         public void Close()
         {

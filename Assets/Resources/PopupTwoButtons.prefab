@@ -208,11 +208,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentScene: {fileID: 0}
-  text: {fileID: 0}
-  button: {fileID: 0}
-  buttonText: {fileID: 0}
-  button2: {fileID: 0}
-  button2Text: {fileID: 0}
+  text: {fileID: 2690071579538880168}
+  button: {fileID: 725476359946543473}
+  buttonText: {fileID: 2783325387134024262}
+  button2: {fileID: 2446825797818171351}
+  button2Text: {fileID: 4439109937818620702}
 --- !u!1 &103303994092636295
 GameObject:
   m_ObjectHideFlags: 0
