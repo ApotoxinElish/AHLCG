@@ -13,6 +13,7 @@ namespace AHLCG
 {
     public class HomeScreen : BaseScreen
     {
+        [SerializeField] private TextMeshProUGUI versionText;
 
         public void OnPlayButtonPressed()
         {

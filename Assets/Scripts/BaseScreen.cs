@@ -15,24 +15,26 @@ namespace AHLCG
         [SerializeField]
         protected Canvas canvas;
 
-        void Awake()
-        {
+        [SerializeField]
+        protected CanvasGroup panelCanvasGroup;
 
+        protected virtual void Awake()
+        {
+            SceneManager.sceneLoaded += OnSceneLoaded;
         }
 
-        void Start()
+        protected virtual void Start()
         {
-
         }
 
-        void OnDestroy()
+        protected virtual void OnDestroy()
         {
-
+            SceneManager.sceneLoaded -= OnSceneLoaded;
         }
 
-        void OnSceneLoaded()
+        protected virtual void OnSceneLoaded(Scene scene, LoadSceneMode mode)
         {
-
+            DOTween.KillAll();
         }
 
         public void OpenPopup()
@@ -41,6 +43,11 @@ namespace AHLCG
         }
 
         public void ClosePopup()
+        {
+
+        }
+
+        public void OnPopupClosed()
         {
 
         }

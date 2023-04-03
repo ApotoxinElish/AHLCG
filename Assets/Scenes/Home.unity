@@ -972,6 +972,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1456195142}
+  panelCanvasGroup: {fileID: 2131677593}
+  versionText: {fileID: 572195831}
 --- !u!1 &1202181473
 GameObject:
   m_ObjectHideFlags: 0
