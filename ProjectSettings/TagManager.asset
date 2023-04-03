@@ -41,3 +41,24 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Board
+    uniqueID: 1592885431
+    locked: 0
+  - name: Battlefield
+    uniqueID: 1651089
+    locked: 0
+  - name: BoardUI
+    uniqueID: 2750458805
+    locked: 0
+  - name: BoardCards
+    uniqueID: 3124112609
+    locked: 0
+  - name: HandCards
+    uniqueID: 3932389979
+    locked: 0
+  - name: Foreground
+    uniqueID: 3239200473
+    locked: 0
+  - name: GameUI
+    uniqueID: 356630685
+    locked: 0
