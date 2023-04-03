@@ -37,19 +37,42 @@ namespace AHLCG
             DOTween.KillAll();
         }
 
-        public void OpenPopup()
+        public void OpenPopup<T>(string name, Action<T> onOpened = null, bool darkenBackground = true) where T : Popup
         {
+            var prefab = Resources.Load<GameObject>(name);
+            currentPopup = Instantiate(prefab) as GameObject;
+            currentPopup.transform.SetParent(canvas.transform, false);
+            currentPopup.GetComponent<Popup>().parentScene = this;
+            if (darkenBackground)
+            {
+                panelCanvasGroup.blocksRaycasts = true;
+                panelCanvasGroup.GetComponent<Image>().DOKill();
+                panelCanvasGroup.GetComponent<Image>().DOFade(0.5f, 0.5f);
+            }
 
+            if (onOpened != null)
+            {
+                onOpened(currentPopup.GetComponent<T>());
+            }
         }
 
         public void ClosePopup()
         {
-
+            if (currentPopup != null)
+            {
+                Destroy(currentPopup);
+                currentPopup = null;
+                panelCanvasGroup.blocksRaycasts = false;
+                panelCanvasGroup.GetComponent<Image>().DOKill();
+                panelCanvasGroup.GetComponent<Image>().DOFade(0.0f, 0.2f);
+            }
         }
 
         public void OnPopupClosed(Popup popup)
         {
-
+            panelCanvasGroup.blocksRaycasts = false;
+            panelCanvasGroup.GetComponent<Image>().DOKill();
+            panelCanvasGroup.GetComponent<Image>().DOFade(0.0f, 0.25f);
         }
     }
 }
