@@ -1,18 +1,48 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
+
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class BaseScreen : MonoBehaviour
+using DG.Tweening;
+
+namespace AHLCG
 {
-    // Start is called before the first frame update
-    void Start()
+    public class BaseScreen : MonoBehaviour
     {
-        
-    }
+        public GameObject currentPopup { get; protected set; }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        [SerializeField]
+        protected Canvas canvas;
+
+        void Awake()
+        {
+
+        }
+
+        void Start()
+        {
+
+        }
+
+        void OnDestroy()
+        {
+
+        }
+
+        void OnSceneLoaded()
+        {
+
+        }
+
+        public void OpenPopup()
+        {
+
+        }
+
+        public void ClosePopup()
+        {
+
+        }
     }
 }

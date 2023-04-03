@@ -11,27 +11,19 @@ using TMPro;
 
 namespace AHLCG
 {
-    public class HomeScreen : MonoBehaviour
+    public class HomeScreen : BaseScreen
     {
-        // Start is called before the first frame update
-        void Start()
-        {
 
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
         public void OnPlayButtonPressed()
         {
             SceneManager.LoadScene("Lobby");
         }
+
         public void OnDecksButtonPressed()
         {
             SceneManager.LoadScene("DeckBuilder");
         }
+
         public void OnQuitButtonPressed()
         {
             // OpenPopup<PopupTwoButtons>("PopupTwoButtons", popup =>
