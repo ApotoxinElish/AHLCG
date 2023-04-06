@@ -20,11 +20,20 @@ namespace AHLCG
         protected override void Awake()
         {
             base.Awake();
+
+            Assert.IsNotNull(versionText);
+            SceneManager.sceneLoaded += (scene, mode) => { DOTween.KillAll(); };
         }
 
         protected override void Start()
         {
             base.Start();
+
+            Application.targetFrameRate = 60;
+
+            DOTween.SetTweensCapacity(500, 50);
+
+            versionText.text = "Version " + AHLCGInfo.version;
         }
 
         public void OnPlayButtonPressed()
