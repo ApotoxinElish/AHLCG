@@ -1,21 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 namespace AHLCG
 {
-    public class Resource : MonoBehaviour
+    /// <summary>
+    /// This base class is used across the kit in order to have types with unique identifiers that
+    /// increase automatically.
+    /// </summary>
+    public class Resource
     {
-        // Start is called before the first frame update
-        void Start()
-        {
-        
-        }
+        /// <summary>
+        /// The unique identifier of this resource.
+        /// </summary>
+        public int id;
 
-        // Update is called once per frame
-        void Update()
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        /// <param name="id">The unique identifier of the resource.</param>
+        public Resource(int id)
         {
-        
+            this.id = id;
         }
     }
 }

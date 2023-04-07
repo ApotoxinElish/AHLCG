@@ -4,18 +4,31 @@ using UnityEngine.Assertions;
 
 namespace AHLCG
 {
-    public class Card
+    /// <summary>
+    /// This class represents a single card in the game.
+    /// </summary>
+    public class Card : Resource
     {
-        // Start is called before the first frame update
-        void Start()
+        /// <summary>
+        /// The current resource identifier.
+        /// </summary>
+        public static int currentId;
+
+        /// <summary>
+        /// The type of this card.
+        /// </summary>
+        public int cardTypeId;
+
+        /// <summary>
+        /// The name of this card.
+        /// </summary>
+        public string name;
+
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        public Card() : base(currentId++)
         {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
         }
     }
 }
