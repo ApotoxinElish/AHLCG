@@ -34,6 +34,8 @@ namespace AHLCG
             DOTween.SetTweensCapacity(500, 50);
 
             versionText.text = "Version " + AHLCGInfo.version;
+
+            GameManager.Instance.Initialize();
         }
 
         public void OnPlayButtonPressed()
