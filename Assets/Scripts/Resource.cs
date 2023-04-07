@@ -1,21 +1,21 @@
+using System.Collections;
 using System.Collections.Generic;
-
-using UnityEngine.Assertions;
+using UnityEngine;
 
 namespace AHLCG
 {
-    public class Card
+    public class Resource : MonoBehaviour
     {
         // Start is called before the first frame update
         void Start()
         {
-
+        
         }
 
         // Update is called once per frame
         void Update()
         {
-
+        
         }
     }
 }
