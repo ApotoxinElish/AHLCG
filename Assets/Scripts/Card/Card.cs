@@ -25,6 +25,21 @@ namespace AHLCG
         public string name;
 
         /// <summary>
+        /// The costs of this card.
+        /// </summary>
+        public List<Cost> costs = new List<Cost>();
+
+        /// <summary>
+        /// The properties of this card.
+        /// </summary>
+        public List<Property> properties = new List<Property>();
+
+        /// <summary>
+        /// The stats of this card.
+        /// </summary>
+        public List<Stat> stats = new List<Stat>();
+
+        /// <summary>
         /// Constructor.
         /// </summary>
         public Card() : base(currentId++)
